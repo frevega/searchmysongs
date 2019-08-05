@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             print("response: \(response.resultCount!)")
         }
         
-        useCase.lookupSongs(collectionId: 294466638) { (response, error) in
+        useCase.lookupCollection(collectionId: 294466638) { (response, error) in
             guard let response = response else {
                 if let error = error {
                     print("Error: \(error.message)")

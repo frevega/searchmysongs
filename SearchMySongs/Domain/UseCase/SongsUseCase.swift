@@ -19,7 +19,7 @@ struct SongsUseCase {
         }
     }
     
-    func lookupSongs(collectionId: Int, completionHandler: @escaping (ResponseModel?, ErrorModel?) -> Void) {
+    func lookupCollection(collectionId: Int, completionHandler: @escaping (ResponseModel?, ErrorModel?) -> Void) {
         repository.lookup(collectionId: collectionId) { (response, error) in
             completionHandler(response, error)
         }
