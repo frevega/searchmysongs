@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SongRepositoryImpl: SongsRepository {
+class SongsRepositoryImpl: SongsRepository {
     private let datasource: SongsDatasource
     private let responseModelToEntity: ResponseModelToEntity
     private let errorModelToEntity: ErrorModelToEntity

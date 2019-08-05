@@ -29,6 +29,7 @@
 		4968189B22F7A3D2002D79EE /* SongsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189A22F7A3D2002D79EE /* SongsDatasource.swift */; };
 		4968189D22F7A3FC002D79EE /* SongsDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189C22F7A3FC002D79EE /* SongsDatasourceImpl.swift */; };
 		496818A022F7A734002D79EE /* SongsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189F22F7A734002D79EE /* SongsUseCase.swift */; };
+		496818A322F7AB61002D79EE /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496818A222F7AB61002D79EE /* ServiceLocator.swift */; };
 		5805564C2C345E2D305243C9 /* Pods_SearchMySongsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F82C51137D7752064484DC5 /* Pods_SearchMySongsTests.framework */; };
 		721C3F99E218882849EB9589 /* Pods_SearchMySongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9307FD85D2145DB8E1BB4DC0 /* Pods_SearchMySongs.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		4968189A22F7A3D2002D79EE /* SongsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsDatasource.swift; sourceTree = "<group>"; };
 		4968189C22F7A3FC002D79EE /* SongsDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsDatasourceImpl.swift; sourceTree = "<group>"; };
 		4968189F22F7A734002D79EE /* SongsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsUseCase.swift; sourceTree = "<group>"; };
+		496818A222F7AB61002D79EE /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		4D2B010AFB389013DE6B3603 /* Pods-SearchMySongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMySongs.release.xcconfig"; path = "Target Support Files/Pods-SearchMySongs/Pods-SearchMySongs.release.xcconfig"; sourceTree = "<group>"; };
 		8F82C51137D7752064484DC5 /* Pods_SearchMySongsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMySongsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9307FD85D2145DB8E1BB4DC0 /* Pods_SearchMySongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMySongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			children = (
 				4968186E22F73E0C002D79EE /* Application */,
 				4968187222F73EBB002D79EE /* Core */,
+				496818A122F7AB06002D79EE /* DI */,
 				4968186D22F73DF4002D79EE /* View */,
 				4968188A22F79BF5002D79EE /* Domain */,
 				4968186C22F73DD0002D79EE /* Data */,
@@ -294,6 +297,14 @@
 				4968189F22F7A734002D79EE /* SongsUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		496818A122F7AB06002D79EE /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				496818A222F7AB61002D79EE /* ServiceLocator.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +490,7 @@
 				4968189222F79FCB002D79EE /* ErrorModelToEntity.swift in Sources */,
 				4968187722F73FFD002D79EE /* SongsRestApi.swift in Sources */,
 				4968188922F79B8E002D79EE /* SongsRepository.swift in Sources */,
+				496818A322F7AB61002D79EE /* ServiceLocator.swift in Sources */,
 				4968188F22F79C68002D79EE /* ResponseModel.swift in Sources */,
 				4968187922F74112002D79EE /* ResponseEntity.swift in Sources */,
 				4968187D22F7483E002D79EE /* ErrorEntity.swift in Sources */,
