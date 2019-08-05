@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,22 @@
 		4909E9CA22F72F920015439C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4909E9C922F72F920015439C /* Assets.xcassets */; };
 		4909E9CD22F72F920015439C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4909E9CB22F72F920015439C /* LaunchScreen.storyboard */; };
 		495A5BE922F736BD006F9016 /* SearchMySongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A5BE822F736BD006F9016 /* SearchMySongsTests.swift */; };
+		4968187522F73EF7002D79EE /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968187422F73EF7002D79EE /* Endpoints.swift */; };
+		4968187722F73FFD002D79EE /* SongsRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968187622F73FFD002D79EE /* SongsRestApi.swift */; };
+		4968187922F74112002D79EE /* ResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968187822F74112002D79EE /* ResponseEntity.swift */; };
+		4968187D22F7483E002D79EE /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968187C22F7483E002D79EE /* ErrorEntity.swift */; };
+		4968187F22F74940002D79EE /* SongsRestApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968187E22F74940002D79EE /* SongsRestApiImpl.swift */; };
+		4968188222F74996002D79EE /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968188122F74996002D79EE /* CodableHelper.swift */; };
+		4968188922F79B8E002D79EE /* SongsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968188822F79B8E002D79EE /* SongsRepository.swift */; };
+		4968188D22F79C59002D79EE /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968188C22F79C59002D79EE /* ErrorModel.swift */; };
+		4968188F22F79C68002D79EE /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968188E22F79C68002D79EE /* ResponseModel.swift */; };
+		4968189222F79FCB002D79EE /* ErrorModelToEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189122F79FCB002D79EE /* ErrorModelToEntity.swift */; };
+		4968189522F7A046002D79EE /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189422F7A046002D79EE /* Mapper.swift */; };
+		4968189722F7A12A002D79EE /* SongsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189622F7A12A002D79EE /* SongsRepositoryImpl.swift */; };
+		4968189922F7A240002D79EE /* ResponseModelToEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189822F7A240002D79EE /* ResponseModelToEntity.swift */; };
+		4968189B22F7A3D2002D79EE /* SongsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189A22F7A3D2002D79EE /* SongsDatasource.swift */; };
+		4968189D22F7A3FC002D79EE /* SongsDatasourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189C22F7A3FC002D79EE /* SongsDatasourceImpl.swift */; };
+		496818A022F7A734002D79EE /* SongsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968189F22F7A734002D79EE /* SongsUseCase.swift */; };
 		5805564C2C345E2D305243C9 /* Pods_SearchMySongsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F82C51137D7752064484DC5 /* Pods_SearchMySongsTests.framework */; };
 		721C3F99E218882849EB9589 /* Pods_SearchMySongs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9307FD85D2145DB8E1BB4DC0 /* Pods_SearchMySongs.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +56,22 @@
 		495A5BE622F736BD006F9016 /* SearchMySongsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchMySongsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		495A5BE822F736BD006F9016 /* SearchMySongsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMySongsTests.swift; sourceTree = "<group>"; };
 		495A5BEA22F736BD006F9016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4968187422F73EF7002D79EE /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		4968187622F73FFD002D79EE /* SongsRestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRestApi.swift; sourceTree = "<group>"; };
+		4968187822F74112002D79EE /* ResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseEntity.swift; sourceTree = "<group>"; };
+		4968187C22F7483E002D79EE /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
+		4968187E22F74940002D79EE /* SongsRestApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRestApiImpl.swift; sourceTree = "<group>"; };
+		4968188122F74996002D79EE /* CodableHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
+		4968188822F79B8E002D79EE /* SongsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepository.swift; sourceTree = "<group>"; };
+		4968188C22F79C59002D79EE /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		4968188E22F79C68002D79EE /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		4968189122F79FCB002D79EE /* ErrorModelToEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModelToEntity.swift; sourceTree = "<group>"; };
+		4968189422F7A046002D79EE /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		4968189622F7A12A002D79EE /* SongsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsRepositoryImpl.swift; sourceTree = "<group>"; };
+		4968189822F7A240002D79EE /* ResponseModelToEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelToEntity.swift; sourceTree = "<group>"; };
+		4968189A22F7A3D2002D79EE /* SongsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsDatasource.swift; sourceTree = "<group>"; };
+		4968189C22F7A3FC002D79EE /* SongsDatasourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsDatasourceImpl.swift; sourceTree = "<group>"; };
+		4968189F22F7A734002D79EE /* SongsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsUseCase.swift; sourceTree = "<group>"; };
 		4D2B010AFB389013DE6B3603 /* Pods-SearchMySongs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMySongs.release.xcconfig"; path = "Target Support Files/Pods-SearchMySongs/Pods-SearchMySongs.release.xcconfig"; sourceTree = "<group>"; };
 		8F82C51137D7752064484DC5 /* Pods_SearchMySongsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMySongsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9307FD85D2145DB8E1BB4DC0 /* Pods_SearchMySongs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMySongs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +106,6 @@
 				F56BC22169E829007C1C4DC9 /* Pods-SearchMySongsTests.debug.xcconfig */,
 				04FEA5D58A0005D9C6EB3F3D /* Pods-SearchMySongsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,12 +141,11 @@
 		4909E9C122F72F8F0015439C /* SearchMySongs */ = {
 			isa = PBXGroup;
 			children = (
-				4909E9C222F72F8F0015439C /* AppDelegate.swift */,
-				4909E9C422F72F8F0015439C /* ViewController.swift */,
-				4909E9C622F72F8F0015439C /* Main.storyboard */,
-				4909E9C922F72F920015439C /* Assets.xcassets */,
-				4909E9CB22F72F920015439C /* LaunchScreen.storyboard */,
-				4909E9CE22F72F920015439C /* Info.plist */,
+				4968186E22F73E0C002D79EE /* Application */,
+				4968187222F73EBB002D79EE /* Core */,
+				4968186D22F73DF4002D79EE /* View */,
+				4968188A22F79BF5002D79EE /* Domain */,
+				4968186C22F73DD0002D79EE /* Data */,
 			);
 			path = SearchMySongs;
 			sourceTree = "<group>";
@@ -127,6 +157,143 @@
 				495A5BEA22F736BD006F9016 /* Info.plist */,
 			);
 			path = SearchMySongsTests;
+			sourceTree = "<group>";
+		};
+		4968186C22F73DD0002D79EE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4968189022F79FAD002D79EE /* Mapper */,
+				4968187022F73E58002D79EE /* Entity */,
+				4968188622F7521C002D79EE /* Repository */,
+				4968187122F73E79002D79EE /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4968186D22F73DF4002D79EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4909E9C922F72F920015439C /* Assets.xcassets */,
+				4909E9C422F72F8F0015439C /* ViewController.swift */,
+				4909E9C622F72F8F0015439C /* Main.storyboard */,
+				4909E9CB22F72F920015439C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4968186E22F73E0C002D79EE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4909E9C222F72F8F0015439C /* AppDelegate.swift */,
+				4909E9CE22F72F920015439C /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4968187022F73E58002D79EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4968187822F74112002D79EE /* ResponseEntity.swift */,
+				4968187C22F7483E002D79EE /* ErrorEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4968187122F73E79002D79EE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4968187622F73FFD002D79EE /* SongsRestApi.swift */,
+				4968187E22F74940002D79EE /* SongsRestApiImpl.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4968187222F73EBB002D79EE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4968187322F73EC2002D79EE /* Config */,
+				4968188022F7497E002D79EE /* Helper */,
+				4968189322F7A02B002D79EE /* Mapper */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4968187322F73EC2002D79EE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4968187422F73EF7002D79EE /* Endpoints.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		4968188022F7497E002D79EE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4968188122F74996002D79EE /* CodableHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4968188622F7521C002D79EE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4968188722F75231002D79EE /* DataSource */,
+				4968188822F79B8E002D79EE /* SongsRepository.swift */,
+				4968189622F7A12A002D79EE /* SongsRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4968188722F75231002D79EE /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4968189A22F7A3D2002D79EE /* SongsDatasource.swift */,
+				4968189C22F7A3FC002D79EE /* SongsDatasourceImpl.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		4968188A22F79BF5002D79EE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4968188B22F79C06002D79EE /* Model */,
+				4968189E22F7A711002D79EE /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4968188B22F79C06002D79EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4968188E22F79C68002D79EE /* ResponseModel.swift */,
+				4968188C22F79C59002D79EE /* ErrorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4968189022F79FAD002D79EE /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				4968189822F7A240002D79EE /* ResponseModelToEntity.swift */,
+				4968189122F79FCB002D79EE /* ErrorModelToEntity.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		4968189322F7A02B002D79EE /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				4968189422F7A046002D79EE /* Mapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		4968189E22F7A711002D79EE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4968189F22F7A734002D79EE /* SongsUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,8 +464,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4968188D22F79C59002D79EE /* ErrorModel.swift in Sources */,
+				4968189D22F7A3FC002D79EE /* SongsDatasourceImpl.swift in Sources */,
+				4968188222F74996002D79EE /* CodableHelper.swift in Sources */,
+				4968187F22F74940002D79EE /* SongsRestApiImpl.swift in Sources */,
+				496818A022F7A734002D79EE /* SongsUseCase.swift in Sources */,
 				4909E9C522F72F8F0015439C /* ViewController.swift in Sources */,
+				4968187522F73EF7002D79EE /* Endpoints.swift in Sources */,
+				4968189B22F7A3D2002D79EE /* SongsDatasource.swift in Sources */,
 				4909E9C322F72F8F0015439C /* AppDelegate.swift in Sources */,
+				4968189922F7A240002D79EE /* ResponseModelToEntity.swift in Sources */,
+				4968189722F7A12A002D79EE /* SongsRepositoryImpl.swift in Sources */,
+				4968189522F7A046002D79EE /* Mapper.swift in Sources */,
+				4968189222F79FCB002D79EE /* ErrorModelToEntity.swift in Sources */,
+				4968187722F73FFD002D79EE /* SongsRestApi.swift in Sources */,
+				4968188922F79B8E002D79EE /* SongsRepository.swift in Sources */,
+				4968188F22F79C68002D79EE /* ResponseModel.swift in Sources */,
+				4968187922F74112002D79EE /* ResponseEntity.swift in Sources */,
+				4968187D22F7483E002D79EE /* ErrorEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRH4LP7FDN;
-				INFOPLIST_FILE = SearchMySongs/Info.plist;
+				INFOPLIST_FILE = SearchMySongs/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRH4LP7FDN;
-				INFOPLIST_FILE = SearchMySongs/Info.plist;
+				INFOPLIST_FILE = SearchMySongs/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
