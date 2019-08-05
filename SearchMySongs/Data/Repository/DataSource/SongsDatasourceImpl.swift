@@ -13,13 +13,13 @@ class SongsDatasourceImpl: SongsDatasource {
         self.restApi = restApi
     }
     
-    func search(term: String, limit: Int, completionHandler: @escaping ([ResponseEntity]?, ErrorEntity?) -> Void) {
+    func search(term: String, limit: Int, completionHandler: @escaping (ResponseEntity?, ErrorEntity?) -> Void) {
         restApi.search(term: term, endpoint: Endpoints.Prod.search, limit: limit) { (response, error) in
             completionHandler(response, error)
         }
     }
     
-    func lookup(collectionId: Int, completionHandler: @escaping ([ResponseEntity]?, ErrorEntity?) -> Void) {
+    func lookup(collectionId: Int, completionHandler: @escaping (ResponseEntity?, ErrorEntity?) -> Void) {
         restApi.lookup(collectionId: collectionId, endpoint: Endpoints.Prod.lookup) { (response, error) in
             completionHandler(response, error)
         }

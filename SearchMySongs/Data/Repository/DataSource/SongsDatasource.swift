@@ -7,6 +7,6 @@
 //
 
 protocol SongsDatasource {
-    func search(term: String, limit: Int, completionHandler: @escaping ([ResponseEntity]?, ErrorEntity?) -> Void)
-    func lookup(collectionId: Int, completionHandler: @escaping ([ResponseEntity]?, ErrorEntity?) -> Void)
+    func search(term: String, limit: Int, completionHandler: @escaping (ResponseEntity?, ErrorEntity?) -> Void)
+    func lookup(collectionId: Int, completionHandler: @escaping (ResponseEntity?, ErrorEntity?) -> Void)
 }

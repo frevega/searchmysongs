@@ -8,7 +8,7 @@
 
 enum Endpoints {
     enum Prod: String {
-        case search = "https://itunes.apple.com/search?term=%@&media=music&entity=song&attribute=songTerm&limit=%@"
-        case lookup = "https://itunes.apple.com/lookup?id=%@&entity=song"
+        case search = "https://itunes.apple.com/search?term=%@&media=music&entity=song&attribute=songTerm&limit=%d"
+        case lookup = "https://itunes.apple.com/lookup?id=%d&entity=song"
     }
 }

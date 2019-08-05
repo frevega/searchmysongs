@@ -22,20 +22,20 @@ class SongsRepositoryImpl: SongsRepository {
         self.errorModelToEntity = errorModelToEntity
     }
     
-    func search(term: String, limit: Int, completionHandler: @escaping ([ResponseModel]?, ErrorModel?) -> Void) {
+    func search(term: String, limit: Int, completionHandler: @escaping (ResponseModel?, ErrorModel?) -> Void) {
         datasource.search(term: term, limit: limit) { (response, error) in
             if let response = response {
-                completionHandler(self.responseModelToEntity.reverseMap(values: response), nil)
+                completionHandler(self.responseModelToEntity.reverseMap(value: response), nil)
             } else if let error = error {
                 completionHandler(nil, self.errorModelToEntity.reverseMap(value: error))
             }
         }
     }
     
-    func lookup(collectionId: Int, completionHandler: @escaping ([ResponseModel]?, ErrorModel?) -> Void) {
+    func lookup(collectionId: Int, completionHandler: @escaping (ResponseModel?, ErrorModel?) -> Void) {
         datasource.lookup(collectionId: collectionId) { (response, error) in
             if let response = response {
-                completionHandler(self.responseModelToEntity.reverseMap(values: response), nil)
+                completionHandler(self.responseModelToEntity.reverseMap(value: response), nil)
             } else if let error = error {
                 completionHandler(nil, self.errorModelToEntity.reverseMap(value: error))
             }

@@ -7,6 +7,6 @@
 //
 
 protocol SongsRepository {
-    func search(term: String, limit: Int, completionHandler: @escaping ([ResponseModel]?, ErrorModel?) -> Void)
-    func lookup(collectionId: Int, completionHandler: @escaping ([ResponseModel]?, ErrorModel?) -> Void)
+    func search(term: String, limit: Int, completionHandler: @escaping (ResponseModel?, ErrorModel?) -> Void)
+    func lookup(collectionId: Int, completionHandler: @escaping (ResponseModel?, ErrorModel?) -> Void)
 }

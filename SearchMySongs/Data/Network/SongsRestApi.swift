@@ -7,6 +7,6 @@
 //
 
 protocol SongsRestApi {
-    func search(term: String, endpoint: Endpoints.Prod, limit: Int, completionHandler: @escaping ([ResponseEntity]?, ErrorEntity?) -> Void)
-    func lookup(collectionId: Int, endpoint: Endpoints.Prod, completionHandler: @escaping ([ResponseEntity]?, ErrorEntity?) -> Void)
+    func search(term: String, endpoint: Endpoints.Prod, limit: Int, completionHandler: @escaping (ResponseEntity?, ErrorEntity?) -> Void)
+    func lookup(collectionId: Int, endpoint: Endpoints.Prod, completionHandler: @escaping (ResponseEntity?, ErrorEntity?) -> Void)
 }

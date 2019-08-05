@@ -19,8 +19,12 @@ class ServiceLocator {
         return SongsDatasourceImpl(restApi: songsRestApi)
     }
     
+    private var songModelToEntity: SongModelToEntity {
+        return SongModelToEntity()
+    }
+    
     private var responseModelToEntity: ResponseModelToEntity {
-        return ResponseModelToEntity()
+        return ResponseModelToEntity(songModelToEntity: songModelToEntity)
     }
     
     private var errorModelToEntity: ErrorModelToEntity {
@@ -34,7 +38,7 @@ class ServiceLocator {
         )
     }
     
-    private var songsUseCase: SongsUseCase {
+    var songsUseCase: SongsUseCase {
         return SongsUseCase(repository: songsRepository)
     }
 }

@@ -12,9 +12,31 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let serviceLocator = ServiceLocator()
+        let useCase = serviceLocator.songsUseCase
+        
+        useCase.searchSongs(term: "Never enough", limit: 20) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("Error: \(error.message)")
+                }
+                return
+            }
+            
+            print("response: \(response.resultCount!)")
+        }
+        
+        useCase.lookupSongs(collectionId: 294466638) { (response, error) in
+            guard let response = response else {
+                if let error = error {
+                    print("Error: \(error.message)")
+                }
+                return
+            }
+            
+            print("response: \(response.resultCount!)")
+        }
     }
-
-
 }
 
