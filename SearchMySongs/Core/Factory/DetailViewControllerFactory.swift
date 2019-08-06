@@ -1,5 +1,5 @@
 //
-//  SongListViewControllerFactory.swift
+//  DetailViewControllerFactory.swift
 //  SearchMySongs
 //
 //  Created by Freddy Miguel Vega Zárate on 04-08-19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SongListViewControllerFactory {
+class DetailViewControllerFactory {
     private let serviceLocator: ServiceLocator
     
     init(serviceLocator: ServiceLocator) {
@@ -16,15 +16,15 @@ class SongListViewControllerFactory {
     }
     
     func songListViewController() -> UIViewController {
-        let presenter = PresenterImpl(
+        let presenter = DetailPresenterImpl(
             useCase: serviceLocator.songsUseCase,
             songViewToModel: serviceLocator.songViewToModel,
             errorViewToModel: serviceLocator.errorViewToModel
         )
-        let delegate = SongListViewDelegate()
-        let datasource = SongListViewDatasource()
+        let delegate = DetailViewDelegate()
+        let datasource = DetailViewDatasource()
         
-        let viewController = SongListViewController(
+        let viewController = DetailViewController(
             presenter: presenter,
             delegate: delegate,
             datasource: datasource

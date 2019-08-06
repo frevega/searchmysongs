@@ -10,6 +10,7 @@ import UIKit
 
 enum ViewTypes {
     case songList
+    case songDetail
 }
 
 class ViewFactory {
@@ -20,7 +21,9 @@ class ViewFactory {
         
         switch viewType {
         case .songList:
-            viewController = SongListViewControllerFactory(serviceLocator: serviceLocator).songListViewController()
+            viewController = ListViewControllerFactory(serviceLocator: serviceLocator).songListViewController()
+        case .songDetail:
+            viewController = DetailViewControllerFactory(serviceLocator: serviceLocator).songListViewController()
         }
         
         return viewController

@@ -7,15 +7,15 @@
 //
 
 struct SongEntity: Codable {
-    let wrapperType: String?
+    let wrapperType: String
     let collectionType: String?
     let kind: String?
     let amgArtistId: Int?
-    let artistId: Int?
-    let collectionId: Int?
+    let artistId: Int
+    let collectionId: Int
     let trackId: Int?
-    let artistName: String?
-    let collectionName: String?
+    let artistName: String
+    let collectionName: String
     let trackName: String?
     let collectionCensoredName: String?
     let trackCensoredName: String?
@@ -28,7 +28,7 @@ struct SongEntity: Codable {
     let previewUrl: String?
     let artworkUrl30: String?
     let artworkUrl60: String?
-    let artworkUrl100: String?
+    let artworkUrl100: String
     let collectionPrice: Double?
     let trackPrice: Double?
     let releaseDate: String?
@@ -36,7 +36,7 @@ struct SongEntity: Codable {
     let trackExplicitness: String?
     let discCount: Int?
     let discNumber: Int?
-    let trackCount: Int?
+    let trackCount: Int
     let trackNumber: Int?
     let trackTimeMillis: Int?
     let country: String?

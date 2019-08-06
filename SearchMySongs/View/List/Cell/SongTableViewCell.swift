@@ -1,5 +1,5 @@
 //
-//  SongListViewDelegate.swift
+//  SongTableViewCell.swift
 //  SearchMySongs
 //
 //  Created by Freddy Miguel Vega Zárate on 8/5/19.

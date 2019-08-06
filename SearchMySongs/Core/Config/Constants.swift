@@ -8,4 +8,5 @@
 
 enum Constants {
     static let fetchLimit = 20
+    static let navigationTitle = "Search My Songs"
 }

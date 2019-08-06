@@ -1,29 +1,31 @@
 //
-//  ViewController.swift
+//  DetailViewController.swift
 //  SearchMySongs
 //
-//  Created by Freddy Miguel Vega Zárate on 04-08-19.
+//  Created by Freddy Miguel Vega Zárate on 8/6/19.
 //  Copyright © 2019 Freddy Miguel Vega Zárate. All rights reserved.
 //
 
 import UIKit
 
-class SongListViewController: UIViewController {
+class DetailViewController: UIViewController {
     @IBOutlet
     private(set) weak var tableView: UITableView!
     private var activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
-    private let presenter: Presenter?
-    private let delegate: SongListViewDelegate?
-    private let datasource: SongListViewDatasource?
+    private let presenter: DetailPresenter?
+    private let delegate: DetailViewDelegate?
+    private let datasource: DetailViewDatasource?
     
-    init(presenter: Presenter,
-         delegate: SongListViewDelegate,
-         datasource: SongListViewDatasource
-    ) {
+    var collectionId: Int = 0
+    
+    init(presenter: DetailPresenter,
+         delegate: DetailViewDelegate,
+         datasource: DetailViewDatasource
+        ) {
         self.presenter = presenter
         self.delegate = delegate
         self.datasource = datasource
-        super.init(nibName: String(describing: SongListViewController.self), bundle: nil)
+        super.init(nibName: String(describing: DetailViewController.self), bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,7 +37,7 @@ class SongListViewController: UIViewController {
         delegate?.attach(view: self)
         datasource?.attach(view: self)
         presenter?.attach(view: self)
-        presenter?.fetchSongsBy(term: "goldfrapp")
+        presenter?.lookupAlbumSongs(id: collectionId)
     }
     
     private func prepareIndicatorView() {
@@ -56,7 +58,7 @@ class SongListViewController: UIViewController {
     }
     
     private func prepareNavgationItem() {
-        navigationItem.title = "Search My Songs"
+        navigationItem.title = Constants.navigationTitle
     }
     
     func reloadTableView() {
@@ -64,7 +66,7 @@ class SongListViewController: UIViewController {
     }
 }
 
-extension SongListViewController: View {
+extension DetailViewController: DetailView {
     func prepare() {
         prepareNavgationItem()
         prepareIndicatorView()
@@ -81,12 +83,8 @@ extension SongListViewController: View {
         activityIndicatorView.stopAnimating()
     }
     
-    func show(songs: [SongView]) {
-        datasource?.songs.append(contentsOf: songs);
-    }
-    
     func show(album: [SongView]) {
-        
+        datasource?.songs.append(contentsOf: album);
     }
     
     func show(error: ErrorView) {
