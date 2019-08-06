@@ -38,6 +38,14 @@ class ServiceLocator {
         )
     }
     
+    var songViewToModel: Mapper<SongView, SongModel> {
+        return SongViewToModel()
+    }
+    
+    var errorViewToModel: Mapper<ErrorView, ErrorModel> {
+        return ErrorViewToModel()
+    }
+    
     var songsUseCase: SongsUseCase {
         return SongsUseCase(repository: songsRepository)
     }

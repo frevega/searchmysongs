@@ -10,6 +10,7 @@ protocol View: class {
     func prepare()
     func showLoading()
     func hideLoading()
-    func show(popular movies: [SongView])
+    func show(songs: [SongView])
+    func show(album: [SongView])
     func show(error: ErrorView)
 }

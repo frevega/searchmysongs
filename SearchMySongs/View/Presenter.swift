@@ -8,6 +8,6 @@
 
 protocol Presenter {
     func attach(view: View)
-    func fetchSongsByTerm()
-    func lookupAlbumSongs()
+    func fetchSongsBy(term: String)
+    func lookupAlbumSongs(id: Int)
 }
