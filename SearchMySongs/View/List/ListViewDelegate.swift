@@ -18,10 +18,12 @@ class ListViewDelegate: NSObject {
 
 extension ListViewDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = ViewFactory.viewController(viewType: .songDetail) as? DetailViewController
-        if let view = view, let viewController = viewController {
-            viewController.collectionId = view.songs[indexPath.row].collectionId
-            view.pushViewController(viewController: viewController)
+        if indexPath.row > 0 {
+            let viewController = ViewFactory.viewController(viewType: .songDetail) as? DetailViewController
+            if let view = view, let viewController = viewController {
+                viewController.collectionId = view.songs[indexPath.row - 1].collectionId
+                view.pushViewController(viewController: viewController)
+            }
         }
     }
     

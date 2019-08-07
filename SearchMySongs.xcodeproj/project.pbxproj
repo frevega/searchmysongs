@@ -47,6 +47,10 @@
 		49741A8922F9D6B500E488AD /* DetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49741A8822F9D6B500E488AD /* DetailViewDelegate.swift */; };
 		49741A8B22F9D77B00E488AD /* DetailViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49741A8A22F9D77B00E488AD /* DetailViewDataSource.swift */; };
 		49741A8D22F9DDB000E488AD /* DetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49741A8C22F9DDB000E488AD /* DetailViewControllerFactory.swift */; };
+		49741A9022FB183800E488AD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49741A8F22FB183800E488AD /* UIViewController.swift */; };
+		49741A9422FB31FD00E488AD /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49741A9222FB31FD00E488AD /* TextFieldTableViewCell.swift */; };
+		49741A9522FB31FD00E488AD /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49741A9322FB31FD00E488AD /* TextFieldTableViewCell.xib */; };
+		49741A9722FB5FD400E488AD /* TextFieldTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49741A9622FB5FD400E488AD /* TextFieldTableViewCellDelegate.swift */; };
 		49B1EC3622F8D8C100933753 /* ErrorViewToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1EC3522F8D8C100933753 /* ErrorViewToModel.swift */; };
 		49B1EC3822F8DA9700933753 /* SongViewToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1EC3722F8DA9700933753 /* SongViewToModel.swift */; };
 		49B1EC3A22F8DEE200933753 /* ListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B1EC3922F8DEE200933753 /* ListPresenterImpl.swift */; };
@@ -116,6 +120,10 @@
 		49741A8822F9D6B500E488AD /* DetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDelegate.swift; sourceTree = "<group>"; };
 		49741A8A22F9D77B00E488AD /* DetailViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewDataSource.swift; sourceTree = "<group>"; };
 		49741A8C22F9DDB000E488AD /* DetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerFactory.swift; sourceTree = "<group>"; };
+		49741A8F22FB183800E488AD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		49741A9222FB31FD00E488AD /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		49741A9322FB31FD00E488AD /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		49741A9622FB5FD400E488AD /* TextFieldTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		49B1EC3522F8D8C100933753 /* ErrorViewToModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorViewToModel.swift; path = SearchMySongs/Data/Mapper/ErrorViewToModel.swift; sourceTree = SOURCE_ROOT; };
 		49B1EC3722F8DA9700933753 /* SongViewToModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SongViewToModel.swift; path = SearchMySongs/Data/Mapper/SongViewToModel.swift; sourceTree = SOURCE_ROOT; };
 		49B1EC3922F8DEE200933753 /* ListPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterImpl.swift; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 		4968187222F73EBB002D79EE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				49741A8E22FB181D00E488AD /* Component */,
 				4968187322F73EC2002D79EE /* Config */,
 				496818A422F7B2A3002D79EE /* Factory */,
 				4968188022F7497E002D79EE /* Helper */,
@@ -395,6 +404,9 @@
 		49741A7322F9C9A500E488AD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				49741A9622FB5FD400E488AD /* TextFieldTableViewCellDelegate.swift */,
+				49741A9222FB31FD00E488AD /* TextFieldTableViewCell.swift */,
+				49741A9322FB31FD00E488AD /* TextFieldTableViewCell.xib */,
 				49741A7922F9C9D600E488AD /* SongTableViewCell.swift */,
 				49741A7822F9C9D600E488AD /* SongTableViewCell.xib */,
 			);
@@ -428,6 +440,14 @@
 				49741A8622F9D5B200E488AD /* DetailPresenterImpl.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		49741A8E22FB181D00E488AD /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				49741A8F22FB183800E488AD /* UIViewController.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49741A7A22F9C9D600E488AD /* SongTableViewCell.xib in Resources */,
+				49741A9522FB31FD00E488AD /* TextFieldTableViewCell.xib in Resources */,
 				4909E9CD22F72F920015439C /* LaunchScreen.storyboard in Resources */,
 				49741A8122F9CFB900E488AD /* DetailViewController.xib in Resources */,
 				4909E9CA22F72F920015439C /* Assets.xcassets in Resources */,
@@ -613,6 +634,7 @@
 				49B1EC4122F8F94D00933753 /* ListViewDelegate.swift in Sources */,
 				496818A022F7A734002D79EE /* SongsUseCase.swift in Sources */,
 				49B1EC3C22F8E0A300933753 /* Constants.swift in Sources */,
+				49741A9722FB5FD400E488AD /* TextFieldTableViewCellDelegate.swift in Sources */,
 				49B1EC4922F900D300933753 /* ViewFactory.swift in Sources */,
 				4909E9C522F72F8F0015439C /* ListViewController.swift in Sources */,
 				4968187522F73EF7002D79EE /* Endpoints.swift in Sources */,
@@ -624,8 +646,10 @@
 				4968189722F7A12A002D79EE /* SongsRepositoryImpl.swift in Sources */,
 				4968189522F7A046002D79EE /* Mapper.swift in Sources */,
 				4968189222F79FCB002D79EE /* ErrorModelToEntity.swift in Sources */,
+				49741A9022FB183800E488AD /* UIViewController.swift in Sources */,
 				4968187722F73FFD002D79EE /* SongsRestApi.swift in Sources */,
 				49741A7B22F9C9D600E488AD /* SongTableViewCell.swift in Sources */,
+				49741A9422FB31FD00E488AD /* TextFieldTableViewCell.swift in Sources */,
 				49741A8722F9D5B200E488AD /* DetailPresenterImpl.swift in Sources */,
 				49B1EC3A22F8DEE200933753 /* ListPresenterImpl.swift in Sources */,
 				49741A8322F9D4B400E488AD /* DetailView.swift in Sources */,

@@ -20,6 +20,8 @@ class ListViewController: UIViewController {
             reloadTableView()
         }
     }
+    private(set) var isViewEditing = false
+    private(set) var searchTerm: String? = nil
     
     init(presenter: ListPresenter,
          delegate: ListViewDelegate,
@@ -40,7 +42,28 @@ class ListViewController: UIViewController {
         delegate?.attach(view: self)
         datasource?.attach(view: self)
         presenter?.attach(view: self)
-        presenter?.fetchSongsBy(term: "goldfrapp")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        registerKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unregisterKeyboardNotifications()
+    }
+    
+    override func keyboardWillAppear(notification _: NSNotification) {
+        if !isViewEditing {
+            isViewEditing = true
+//            tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        }
+    }
+    
+    override func keyboardWillDisappear(notification _: NSNotification) {
+        isViewEditing = false
+        //tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
     }
     
     private func prepareIndicatorView() {
@@ -54,10 +77,14 @@ class ListViewController: UIViewController {
     }
     
     private func prepareTableView() {
-        let cellName = String(describing: SongTableViewCell.self)
-        tableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+        let textCellname = String(describing: TextFieldTableViewCell.self)
+        tableView.register(UINib(nibName: textCellname, bundle: nil), forCellReuseIdentifier: textCellname)
+        let songCellname = String(describing: SongTableViewCell.self)
+        tableView.register(UINib(nibName: songCellname, bundle: nil), forCellReuseIdentifier: songCellname)
         tableView.delegate = delegate
         tableView.dataSource = datasource
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
     }
     
     private func prepareNavgationItem() {
@@ -91,6 +118,7 @@ extension ListViewController: ListView {
     }
     
     func show(songs: [SongView]) {
+        self.songs.removeAll()
         self.songs.append(contentsOf: songs);
     }
     
@@ -98,5 +126,27 @@ extension ListViewController: ListView {
         let alertView = UIAlertController(title: "Error", message: error.message, preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertView, animated: true)
+    }
+}
+
+extension ListViewController: TextFieldTableViewCellDelegate {
+    func prepareToolbar(for searchBar: UISearchBar) {
+        searchBar.inputAccessoryView = prepareKeyboardToolbar(textFields: nil, keyboardType: .default)
+    }
+    
+    func update(searchTerm: String) {
+        self.searchTerm = searchTerm
+    }
+    
+    func cancelButtonClicked() {
+        self.searchTerm = nil
+        isViewEditing = false
+    }
+    
+    func searchByTerm() {
+        if let searchTerm = searchTerm {
+            print(searchTerm)
+            presenter?.fetchSongsBy(term: searchTerm)
+        }
     }
 }

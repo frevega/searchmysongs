@@ -36,10 +36,6 @@ class SongTableViewCell: UITableViewCell {
         self.albumTitle.text = albumTitle
         self.artistName.text = artisName
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     override func prepareForReuse() {
         songImage.image = UIImage(named: "placeholder")
